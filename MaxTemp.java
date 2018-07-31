@@ -24,7 +24,7 @@ public class MaxTemp {
     private Text temp2 = new Text();
 
     public void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
-      StringTokenizer it = new StringTokenizer(value.toString());
+      StringTokenizer it = new StringTokenizer(value.toString(),",");
 
 	month.set(it.nextToken());
 	temp2.set(it.nextToken());
